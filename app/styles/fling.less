@@ -1,0 +1,85 @@
+html {
+  height: 100%;
+  font-family: @font-main;
+}
+body {
+  min-height: 100%;
+  background-color: @color-background;
+  font-family: @font-main;
+  &.embedded {
+    height: 100%;
+    background-color: transparent;
+    .main-content {
+      height: 100%;
+    }
+  }
+  &.portal {
+    background-color: #fff;
+  }
+}
+.footer {
+  text-align: right;
+  padding: 15px 30px;
+  width: 100%;
+  a {
+    color: @color-highlight;
+  }
+  &.text-center {
+    text-align: center !important;
+  }
+  &.sidebar-active {
+    margin-left: @sidebar-width;
+  }
+}
+.ie-fallback-message {
+  color: #fff;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 100px;
+  font-size: 15px;
+  text-align: center;
+  z-index: @z-index-max;
+  background-color: #3f3f3f;
+  a {
+    color: @color-gbox;
+  }
+  img {
+    width: 120px;
+  }
+}
+
+.main-content {
+  margin: 0;
+  padding: 0;
+  cursor: auto;
+  height: inherit;
+}
+
+.required-field {
+  color: @required-field-color;
+}
+
+// Elements inside a container with this class
+// will be automatically centered if they are inline or
+// inline blocks and have vertical-align set to middle
+.dynamic-centering {
+  text-align: center;
+  &:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    margin-right: -0.25em;
+    vertical-align: middle;
+  }
+}
+
+//Buttons
+.md-button{
+  padding: 6px;
+  font-size: 0.8rem;
+}

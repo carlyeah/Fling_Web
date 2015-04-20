@@ -1,0 +1,60 @@
+
+.transform (@transform) {
+  -webkit-transform: @transform;
+  -moz-transform: @transform;
+  -ms-transform: @transform;
+  -o-transform: @transform;
+  transform: @transform;
+}
+
+.perspective (@perspective) {
+  -webkit-perspective: @perspective;
+  -moz-perspective: @perspective;
+  -ms-perspective: @perspective;
+  -o-perspective: @perspective;
+  perspective: @perspective;
+}
+
+.hardware-accelerated {
+  .transform(translate3d(0, 0, 0));
+  .perspective(1000px);
+  -webkit-backface-visibility: hidden;
+}
+
+.left-border-radius(@radius) {
+  border-top-left-radius: @radius;
+  border-bottom-left-radius: @radius;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.right-border-radius(@radius) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: @radius;
+  border-bottom-right-radius: @radius;
+}
+
+.help-tooltip-maker(@bgColor; @textColor; @hoverBgColor; @hoverTextColor: white) {
+  border-radius: 50px;
+  background-color: @bgColor;
+  color: @textColor;
+  height: 15px;
+  width: 15px;
+  font-size: 10px;
+  line-height: 15px;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  &:hover {
+    color: @hoverTextColor;
+    background-color: @hoverBgColor;
+  }
+}
+
+.pp-placeholder(@color: @input-color-placeholder, @line-height: 1, @font-size: 12px) {
+  .placeholder(@color);
+  &::-moz-placeholder           { font-size: @font-size; line-height: @line-height }
+  &:-ms-input-placeholder       { font-size: @font-size; line-height: @line-height }
+  &::-webkit-input-placeholder  { font-size: @font-size; line-height: @line-height }
+}
