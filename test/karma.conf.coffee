@@ -23,6 +23,7 @@ module.exports = (config) ->
       'bower_components/angular-touch/angular-touch.js'
       'bower_components/angular-aria/angular-aria.js'
       'bower_components/angular-material/angular-material.js'
+      'bower_components/angular-translate/angular-translate.js'
       'bower_components/angular-mocks/angular-mocks.js'
       # endbower
       # bower:coffee
